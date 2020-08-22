@@ -1,0 +1,30 @@
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+
+const Weather = ({ name }) => {
+	const [ weather, setWeather ] = useState([])
+
+	useEffect(() => {
+    axios.get("http://api.weatherstack.com/current", {
+      params: {
+        access_key: process.env.REACT_APP_API_KEY,
+        query: name
+      }
+    })
+			.then(respo => {
+				setWeather(respo.data.current)
+			})
+	}, [])
+
+  var showWeather = Object.keys(weather).map(function(key) {
+    return <p>{key} : {weather[key]} </p>
+  })
+	return (
+    <div>
+  		<h2>Sää</h2>
+      {showWeather}
+		</div>
+	)
+}
+
+export default Weather
