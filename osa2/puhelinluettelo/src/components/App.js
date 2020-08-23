@@ -51,12 +51,26 @@ class App extends React.Component {
           nfClass: "success",
           nfMessage: "Added "+per.name
         })
+
+        setTimeout(() => {
+          this.setState({
+            nfClass: "",
+            nfMessage: null
+          })
+        }, 3000);
       })
       .catch(err => {
         this.setState({
           nfClass: "error",
           nfMessage: err.response.data.error
         })
+
+        setTimeout(() => {
+          this.setState({
+            nfClass: "",
+            nfMessage: null
+          })
+        }, 3000);
       })
     } else {
       var id = this.state.people.find(per => per.name === persons.name).id;
@@ -77,6 +91,13 @@ class App extends React.Component {
             nfClass: "error",
             nfMessage: err.response.data
           })
+
+          setTimeout(() => {
+            this.setState({
+              nfClass: "",
+              nfMessage: null
+            })
+          }, 3000);
         })
       }
     }
@@ -93,6 +114,13 @@ class App extends React.Component {
           nfMessage: "Successfully deleted a phonebook",
           nfClass: "success"
         })
+
+        setTimeout(() => {
+          this.setState({
+            nfClass: "",
+            nfMessage: null
+          })
+        }, 3000);
       })
       .catch(res => {
         this.setState({
@@ -100,6 +128,13 @@ class App extends React.Component {
           nfMessage: "Item has already been removed from the server",
           nfClass: "error"
         })
+
+        setTimeout(() => {
+          this.setState({
+            nfClass: "",
+            nfMessage: null
+          })
+        }, 3000);
       })
     }
   }
