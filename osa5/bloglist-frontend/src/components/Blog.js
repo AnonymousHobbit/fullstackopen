@@ -43,7 +43,7 @@ class Blog extends React.Component {
         <br />
         <div>
           {this.props.blog.title} - {this.props.blog.author} <button id="viewBtn"
-          className="blogver" onClick={this.toggleVisibility}>{this.state.butText}</button>
+            className="blogver" onClick={this.toggleVisibility}>{this.state.butText}</button>
         </div>
         {!this.state.visible ? (
           null
