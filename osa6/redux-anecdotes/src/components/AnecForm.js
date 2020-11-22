@@ -1,13 +1,13 @@
 import React from "react"
-import { useDispatch } from 'react-redux'
+import { connect } from 'react-redux'
 import { addAnek } from "../reducers/anecdoteReducer.js"
+import { newNot  } from "../reducers/notificationReducer.js"
 
-
-const AnecForm = () => {
-  const dispatch = useDispatch()
+const AnecForm = (props) => {
   const add = (event) => {
     event.preventDefault()
-    dispatch(addAnek(event.target.anek.value))
+    props.addAnek(event.target.anek.value)
+    props.newNot("you added: '"+event.target.anek.value+"'", 5)
     event.target.anek.value = ""
   }
 
@@ -22,4 +22,9 @@ const AnecForm = () => {
   )
 }
 
-export default AnecForm
+const mapDispatchToProps = {
+  addAnek, newNot
+}
+
+const ConnectedForm = connect(null, mapDispatchToProps)(AnecForm)
+export default ConnectedForm
