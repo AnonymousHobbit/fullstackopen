@@ -4,7 +4,6 @@ import { filtering } from "../reducers/filterReducer.js"
 
 const Filter = (props) => {
 
-
   const handleChange = async (event) => {
     props.filtering(event.target.value)
   }
