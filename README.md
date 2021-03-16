@@ -7,3 +7,5 @@
 - [Part 3](https://github.com/AnonymousHobbit/Fullstackopen_osa3) [COMPLETED]  
 - [Part 4](https://github.com/AnonymousHobbit/fullstackopen/tree/master/osa4) [COMPLETED]  
 - [Part 5](https://github.com/AnonymousHobbit/fullstackopen/tree/master/osa4) [COMPLETED]
+- [Part 6](https://github.com/AnonymousHobbit/fullstackopen/tree/master/osa4) [COMPLETED]
+- [Part 7](https://github.com/AnonymousHobbit/fullstackopen/tree/master/osa4) [COMPLETED] 15/22
